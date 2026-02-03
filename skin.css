@@ -1,39 +1,36 @@
-/*BEGIN PS4 White Controller Styling*/
-.controller.ds4.white {
-  background-image: url(https://i.imgur.com/GfqAlau.png);
+/* FORCE L'AFFICHAGE DE TA COQUE */
+.controller.ds4 {
+background-image: url('https://i.imgur.com/GfqAlau.png') !important;
+background-size: contain !important;
+background-repeat: no-repeat !important;
 }
 
-.ds4.white.disconnected {
-  background: url(https://i.imgur.com/OPcjlUm.png);
+/* TES STICKS VIOLETS */
+.controller.ds4 .stick {
+background-image: url('https://i.imgur.com/eFTDg03.png') !important;
 }
 
-.ds4.white .trigger {
-  background-image: url(https://i.imgur.com/1x8BeD9.png);
+/* CACHE LES BOUTONS PAR DÉFAUT */
+.controller.ds4 .button,
+.controller.ds4 .trigger,
+.controller.ds4 .bumper,
+.controller.ds4 .touchpad {
+opacity: 0;
 }
 
-.ds4.white .bumper {
-  background-image: url(https://i.imgur.com/81fK0sy.png);
+/* FAIT APPARAITRE TES BOUTONS QUAND TU APPUIES */
+.controller.ds4 .button.pressed,
+.controller.ds4 .trigger.pressed,
+.controller.ds4 .bumper.pressed {
+opacity: 1 !important;
 }
 
-.ds4.white .touchpad.pressed {
-  background-image: url(https://i.imgur.com/Ps6GmaB.png);
-}
+/* LIENS POUR TES BOUTONS SPÉCIFIQUES */
+.controller.ds4 .button.a.pressed { background-image: url('https://i.imgur.com/QH1oU6j.png') !important; }
+.controller.ds4 .button.b.pressed { background-image: url('https://i.imgur.com/QH1oU6j.png') !important; }
+.controller.ds4 .button.x.pressed { background-image: url('https://i.imgur.com/QH1oU6j.png') !important; }
+.controller.ds4 .button.y.pressed { background-image: url('https://i.imgur.com/QH1oU6j.png') !important; }
 
-.ds4.white .back,
-.ds4 .start {
-  background-image: url(https://i.imgur.com/1BwQ8RK.png);
-}
-
-.ds4.white .button {
-  background-image: url(https://i.imgur.com/OMloU6j.png);
-}
-
-.ds4.white .stick {
-  background-image: url(https://i.imgur.com/eFTDg03.png);
-}
-
-.ds4.white .face {
-  background-image: url(https://i.imgur.com/exLj4cW.png);
-}
-
-/*END PS4 White Controller Styling*/
+/* GACHETTES ET BUMPERS */
+.controller.ds4 .trigger.pressed { background-image: url('https://i.imgur.com/1x8BeD9.png') !important; }
+.controller.ds4 .bumper.pressed { background-image: url('https://i.imgur.com/81fK0sy.png') !important; }

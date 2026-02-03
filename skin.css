@@ -1,0 +1,39 @@
+/* === BASE MANETTE === */
+.controller {
+transform: scale(1.2);
+}
+
+/* Fond transparent */
+.controller svg {
+background: transparent !important;
+}
+
+/* === BOUTONS === */
+.button {
+fill: #ffffff;
+opacity: 0.3;
+}
+
+/* Bouton pressé */
+.button.pressed {
+fill: #ff2a2a;
+opacity: 1;
+}
+
+/* === STICKS === */
+.stick {
+fill: #111;
+}
+
+.stick.pressed {
+fill: #ff2a2a;
+}
+
+/* === D-PAD === */
+.dpad {
+fill: #000;
+}
+
+.dpad.pressed {
+fill: #ff2a2a;
+}

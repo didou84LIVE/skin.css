@@ -1,36 +1,252 @@
-/* FORCE L'AFFICHAGE DE TA COQUE */
-.controller.ds4 {
-background-image: url('https://i.imgur.com/GfqAlau.png') !important;
-background-size: contain !important;
-background-repeat: no-repeat !important;
+.custom.controller, .custom.controller::after {
+  background: url(https://i.imgur.com/GfqAlau.png) no-repeat;
+  background-size: cover;
+  width: 806px;
+  height: 598.90002px;
+}
+.custom.controller.disconnected {
+  opacity: 0.75;
+}
+.custom.controller.disconnected::after {
+  content: '';
+  background: url(https://i.imgur.com/OPcjlUm.png) no-repeat;
+  position: absolute;
+  opacity: 0.5;
 }
 
-/* TES STICKS VIOLETS */
-.controller.ds4 .stick {
-background-image: url('https://i.imgur.com/eFTDg03.png') !important;
+
+.custom .triggers {
+  position: absolute;
+  width: 588.5px;
+  height: 90.8px;
+  left: 108.7px;
+}
+.custom .trigger {
+  position: absolute;
+  width: 99px;
+  height: 90.8px;
+  background: url(https://i.imgur.com/1x8BeD9.png) no-repeat;
+  background-size: 200px 90.8px;
+  opacity: 0;
+}
+.custom .triggers::before, .custom .triggers::after {
+  content: '';
+  position: absolute;
+  width: 99px;
+  height: 90.8px;
+  top: 0;
+  background: url(https://i.imgur.com/1x8BeD9.png) no-repeat;
+  background-size: 200px 90.8px;
+  filter: hue-rotate(40deg);
+  z-index: -1;
+}
+.custom .triggers::before {
+  left: 0;
+}
+.custom .triggers::after {
+  right: 0;
+  background-position-x: -101px;
+}
+.custom .trigger.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom .trigger.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-position-x: -101px;
 }
 
-/* CACHE LES BOUTONS PAR DÉFAUT */
-.controller.ds4 .button,
-.controller.ds4 .trigger,
-.controller.ds4 .bumper,
-.controller.ds4 .touchpad {
-opacity: 0;
+
+.custom .bumper {
+  width: 98.9px;
+  height: 22.4px;
+  background: url(https://i.imgur.com/81fK0sy.png) no-repeat;
+  filter: hue-rotate(40deg);
+}
+.custom .bumpers {
+  position: absolute;
+  width: 588.4px;
+  height: 22.4px;
+  left: 108.8px;
+  top: 94.4px;
+}
+.custom .bumper.pressed {
+  filter: initial;
+}
+.custom .bumper.left {
+  float: left;
+}
+.custom .bumper.right {
+  float: right;
+  transform: rotateY(180deg);
 }
 
-/* FAIT APPARAITRE TES BOUTONS QUAND TU APPUIES */
-.controller.ds4 .button.pressed,
-.controller.ds4 .trigger.pressed,
-.controller.ds4 .bumper.pressed {
-opacity: 1 !important;
+
+.custom .touchpad {
+  position: absolute;
+  width: 263.841px;
+  height: 151.2px;
+  left: 271.1px;
+  top: 122.4px;
+  background: url(https://i.imgur.com/Ps6GmaB.png) no-repeat center;
+  background-size: cover;
+  filter: hue-rotate(250deg);
+}
+.custom .touchpad.pressed {
+  filter: initial;
 }
 
-/* LIENS POUR TES BOUTONS SPÉCIFIQUES */
-.controller.ds4 .button.a.pressed { background-image: url('https://i.imgur.com/QH1oU6j.png') !important; }
-.controller.ds4 .button.b.pressed { background-image: url('https://i.imgur.com/QH1oU6j.png') !important; }
-.controller.ds4 .button.x.pressed { background-image: url('https://i.imgur.com/QH1oU6j.png') !important; }
-.controller.ds4 .button.y.pressed { background-image: url('https://i.imgur.com/QH1oU6j.png') !important; }
 
-/* GACHETTES ET BUMPERS */
-.controller.ds4 .trigger.pressed { background-image: url('https://i.imgur.com/1x8BeD9.png') !important; }
-.controller.ds4 .bumper.pressed { background-image: url('https://i.imgur.com/81fK0sy.png') !important; }
+.custom .meta {
+  position: absolute;
+  width: 42.4px;
+  height: 42.4px;
+  left: 381.8px;
+  top: 340.8px;
+  background: url(https://i.imgur.com/wqd9GFj.png) no-repeat center;
+  filter: invert(1);
+}
+.custom .meta.pressed {
+  filter: initial;
+}
+
+
+.custom .arrows {
+  position: absolute;
+  width: 353.4px;
+  height: 46.7px;
+  top: 141.8px;
+  left: 226.3px;
+}
+.custom .back, .custom .start {
+  position: absolute;
+  width: 28.4px;
+  height: 46.7px;
+  top: 0;
+  background: url(https://i.imgur.com/1BwQ8RK.png) no-repeat;
+  background-size: 28.4px 46.7px;
+  filter: hue-rotate(180deg) saturate(0.5) brightness(1.5);
+}
+.custom .back.pressed, .custom .start.pressed {
+  filter: initial;
+}
+.custom .back {
+  left: 0;
+}
+.custom .start {
+  right: 0;
+}
+
+
+.custom .abxy {
+  position: absolute;
+  width: 169.8px;
+  height: 169.7px;
+  top: 160px;
+  left: 567.4px;
+}
+.custom .button {
+  position: absolute;
+  width: 54.6px;
+  height: 54.6px;
+  background: url(https://i.imgur.com/OMloU6j.png) no-repeat;
+  background-size: 224.0px 112.3px;
+}
+.custom .button.pressed {
+  background-position-y: -57.7px;
+}
+.custom .a {
+  background-position: 0 0;
+  bottom: 0;
+  left: 57.6px;
+}
+.custom .b {
+  background-position: -56.5px 0;
+  top: 57.5px;
+  right: 0;
+}
+.custom .x {
+  background-position: -112.9px 0;
+  top: 57.5px;
+}
+.custom .y {
+  background-position: -169.4px 0;
+  left: 57.6px;
+}
+
+
+.custom .sticks {
+  position: absolute;
+  width: 350.6px;
+  height: 94px;
+  top: 309px;
+  left: 227.7px;
+}
+.custom .stick {
+  position: absolute;
+  background: url(https://i.imgur.com/eFTDg03.png) no-repeat;
+  height: 94px;
+  width: 94px;
+}
+.custom .stick.pressed.left {
+  background-position-x: -96px;
+}
+.custom .stick.pressed.right {
+  background-position-x: -192px;
+}
+.custom .stick.left {
+  top: 0;
+  left: 0;
+}
+.custom .stick.right {
+  top: 0;
+  left: calc(100% - 94px);
+}
+
+
+.custom .dpad {
+  position: absolute;
+  width: 125.818px;
+  height: 125.918px;
+  top: 181.391px;
+  left: 90.991px;
+}
+.custom .face {
+  background: url(https://i.imgur.com/exLj4cW.png) no-repeat;
+  background-size: 180.0px 108.0px;
+  position: absolute;
+}
+.custom .face.up, .custom .face.down {
+  width: 36.437px;
+  height: 51.919px;
+}
+.custom .face.left, .custom .face.right {
+  width: 51.919px;
+  height: 36.437px;
+}
+.custom .face.up {
+  left: 44.691px;
+  top: 0;
+  background-position: -37.533px 0px;
+}
+.custom .face.down {
+  left: 44.691px;
+  bottom: 0;
+  background-position: 0px 0px;
+}
+.custom .face.left {
+  top: 44.691px;
+  left: 0;
+  background-position: -75.066px 0px;
+}
+.custom .face.right {
+  top: 44.791px;
+  right: 0px;
+  background-position: -128.081px 0px;
+}
+.custom .face.pressed {
+  background-position-y: -56.081px;
+}
